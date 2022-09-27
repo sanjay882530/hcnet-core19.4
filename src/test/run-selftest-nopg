@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Copyright 2018 Hcnet Development Foundation and contributors. Licensed
+# under the Apache License, Version 2.0. See the COPYING file at the root
+# of this distribution or at http://www.apache.org/licenses/LICENSE-2.0
+
+BASE_INSTANCE="$1"
+TESTS="$2"
+
+HCNET_CORE_DEFAULT_TEST_PARAMS="--ll fatal -w NoTests -a -r simple"
+if [[ "$ALL_VERSIONS" != "" ]]; then
+    HCNET_CORE_DEFAULT_TEST_PARAMS="$HCNET_CORE_DEFAULT_TEST_PARAMS --all-versions"
+fi
+
+: ${HCNET_CORE_TEST_PARAMS=$HCNET_CORE_DEFAULT_TEST_PARAMS}
+
+./hcnet-core test $HCNET_CORE_TEST_PARAMS --base-instance $BASE_INSTANCE "$TESTS" 2> /dev/null

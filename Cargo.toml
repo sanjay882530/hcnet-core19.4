@@ -1,0 +1,8 @@
+[workspace]
+members = ["src/rust"]
+
+[patch.crates-io]
+hcnet-xdr = { git = "https://github.com/hcnet/rs-hcnet-xdr", rev = "cebf5259" }
+wasmi = { package = "soroban-wasmi", git = "https://github.com/hcnet/wasmi", rev = "a61b6df" }
+soroban-env-common = { git = "https://github.com/hcnet/rs-soroban-env", rev = "4aabfbf" }
+soroban-native-sdk-macros = { git = "https://github.com/hcnet/rs-soroban-env", rev = "4aabfbf" }

@@ -1,0 +1,4 @@
+#include "main/HcnetCoreVersion.h"
+
+const std::string HCNET_CORE_VERSION = "%%VERSION%%";
+
